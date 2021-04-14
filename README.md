@@ -1,11 +1,11 @@
-## Sass 컴파일방법
+## Scss 컴파일방법
 ```
 npm init -y //package.json 생성
 npm i -D parcel-bundler // parcel-bundler 설치
 npx parcel "실행할 파일" // 실행
 ```
 
-## Sass의 데이터 종류
+## Scss의 데이터 종류
 
 Number: 숫자
 Strings: 문자
