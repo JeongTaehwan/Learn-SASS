@@ -178,3 +178,45 @@ div {
   }
 }
 ```
+
+## 가변 인수
+
+- 입력해야 할 인수가 불확실한 경우에 사용함
+- 가변 인수는 매개변수 뒤에 `...`을 붙여서 사용함
+
+```scss
+@mixin bg($width, $height, $bg-values...) {
+  width: $width;
+  height: $height;
+  background: $bg-values;
+}
+
+div {
+  @include bg(
+    100px,
+    200px,
+    url("/images/a.png") no-repeat 10px 20px,
+    url("/images/b.png") no-repeat,
+    url("/images/c.png")
+  );
+}
+```
+
+- 인수에도 가변 인수를 사용할 수 있음
+
+```scss
+@mixin font($style: normal, $weight: normal, $size: 16px, $family: sans-serif) {
+  font: {
+    style: $style;
+    weight: $weight;
+    size: $size;
+    family: $family;
+  }
+}
+
+a {
+  // 매개변수 순서와 개수에 맞게 전달
+  $font-values: italic, bold, 16px, sans-serif;
+  @include font($font-values...);
+}
+```
