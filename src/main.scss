@@ -24,3 +24,13 @@
     }
   }
 }
+.container3 {
+  $change: 10px;
+  .item3 {
+    @include size($h: 150px); // 키워드 인자
+    background: tomato;
+    @if ($change == 10px) {
+      background: rgb(112, 158, 255);
+    }
+  }
+}
