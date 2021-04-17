@@ -13,3 +13,14 @@
     }
   }
 }
+
+.container2 {
+  $change: 10px;
+  .item2 {
+    @include size; // 인자를 선언하지 않았으므로 기본 값이 들어감
+    background: tomato;
+    @if ($change == 10px) {
+      background: rgb(255, 172, 172);
+    }
+  }
+}

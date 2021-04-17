@@ -157,8 +157,9 @@ div {
 ## 재활용 (Mixins)
 
 - `Mixins`으로 자주 사용하는 코드를 따로 선언하여 사용할 수 있다.
-- `Mixins` 안의 값은 `default` 값으로 선언을 하지 않을 시 들어가는 값이다
 - `Mixins` 를 선언하고 불러올땐 `@include`를 사용한다.
+- `mixin`의 괄호안에 있는 것은 매개변수(Parameters)라고 부르고 `include`안에 있는 것은 인수(자) 라고 부른다
+- 인수를 선언하지 않으면 매개변수안의 값이 기본 값으로 들어간다.
 
 ```scss
 @mixin size($w: 100px, $h: 100px) {
