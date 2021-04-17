@@ -98,8 +98,32 @@ npx parcel "실행할 파일" // 실행
   - `>=` 대소 및 동등 / 보다 크거나 같은
 - 논리(불린, Boolean) 연산자
   - `and` 그리고
+  ```scss
+  $width: 90px;
+  div {
+    @if ($width < 100px and $width = 90px) {
+      height: 300px;
+    }
+  }
+  ```
   - `or` 또는
+  ```scss
+  $width: 90px;
+  div {
+    @if ($width > 100px or $width > 30px) {
+      height: 300px;
+    }
+  }
+  ```
   - `not` 부정
+  ```scss
+  $width: 90px;
+  div {
+    @if not($width > 100px) {
+      height: 300px;
+    }
+  }
+  ```
 - 문자 연산
   - 기본적으로 `+`를 사용함
   - 첫번째 피연산자에 따옴표가 붙어있으면 연산결과도 따옴표가 붙어있고, 그렇지 않으면 그대로 나옴
