@@ -220,3 +220,25 @@ a {
   @include font($font-values...);
 }
 ```
+
+## Content
+
+- `mixin`에 스타일이 포함되 있으면 스타일을 `@contents`로 추가할 수 있음
+- `@include`뒤에 중괄호를 열어 스타일을 추가해줌
+
+```scss
+@mixin icon($url) {
+  &::after {
+    content: $url;
+    @content;
+  }
+}
+.icon1 {
+  @include icon("/images/icon.png");
+}
+.icon2 {
+  @include icon("/images/icon.png") {
+    position: absolute;
+  }
+}
+```
