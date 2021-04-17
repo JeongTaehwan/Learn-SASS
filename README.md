@@ -265,3 +265,36 @@ a {
   - 내 선택자가 어디에 첨부될 것인가?
   - 원치 않는 부작용이 초래될수도 있음
   - 한 번의 확장으로 큰 css파일이 만들어 질 수 있음
+
+## 함수
+
+- `mixin`과 문법이 비슷함
+- 함수는 값을 `@return` 키워드로 반환함
+- 함수는 지시어가 없이 함수이름을 바로 사용함
+- 함수이름은 내장함수와 겹치지 않게 지명해야함
+
+```scss
+@function columns($number: 1, $columns: 12, $width: 1200px) {
+  @return $width * ($number/$columns);
+}
+
+.container {
+  $width: 1200px;
+  width: $width;
+  .item:nth-child(1) {
+    width: columns();
+    height: 200px;
+    background: red;
+  }
+  .item2:nth-child(2) {
+    width: columns(8);
+    height: 100px;
+    background: blue;
+  }
+  .item3:nth-child(3) {
+    width: columns(3);
+    height: 50px;
+    background: yellow;
+  }
+}
+```
