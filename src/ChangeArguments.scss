@@ -1,0 +1,14 @@
+@mixin font($style: normal, $weight: normal, $size: 16px, $family: sans-serif) {
+  font: {
+    style: $style;
+    weight: $weight;
+    size: $size;
+    family: $family;
+  }
+}
+
+a {
+  // 매개변수 순서와 개수에 맞게 전달
+  $font-values: italic, bold, 16px, sans-serif;
+  @include font($font-values...);
+}
