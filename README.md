@@ -8,25 +8,21 @@ npx parcel "실행할 파일" // 실행
 
 ## Scss의 데이터 종류
 
-```
-`Number`: 숫자
-`Strings`: 문자
-`Colors`: 색상 표현
-`Booleans`: 논리
-`Nulls`: 아무것도 없음
-`Lists`: 공백이나 , 로 구분된 값의 목록 | ex) `(apple, orange, banana)`
-`Maps`: `Lists`와 유사하나 값이 `Key: Value` 형태 | `ex) (apple: a, orange: o, banana: b)`
-```
+- `Number`: 숫자
+- `Strings`: 문자
+- `Colors`: 색상 표현
+- `Booleans`: 논리
+- `Nulls`: 아무것도 없음
+- `Lists`: 공백이나 , 로 구분된 값의 목록 | ex) `(apple, orange, banana)`
+- `Maps`: `Lists`와 유사하나 값이 `Key: Value` 형태 | `ex) (apple: a, orange: o, banana: b)`
 
 ## 데이터 종류의 특이사항
 
-```
-`Number`: 숫자에 단위가 있거나 없습니다.
-`Strings`: 문자에 따옴표가 있거나 없습니다.
-`Nulls`: 속성값으로 `null`이 사용되면 컴파일하지 않습니다.
-`Lists`: `()`를 붙이거나 붙이지 않습니다.
-`Map`: `()`를 꼭 붙여야 합니다.
-```
+- `Number`: 숫자에 단위가 있거나 없습니다.
+- `Strings`: 문자에 따옴표가 있거나 없습니다.
+- `Nulls`: 속성값으로 `null`이 사용되면 컴파일하지 않습니다.
+- `Lists`: `()`를 붙이거나 붙이지 않습니다.
+- `Map`: `()`를 꼭 붙여야 합니다.
 
 ## 상위 선택자 참조 (Ampersand)
 
