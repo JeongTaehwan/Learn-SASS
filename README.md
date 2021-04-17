@@ -153,3 +153,27 @@ div {
   background-color: transparentize($color, 0.2); // 20% 더 투명하게 / 0.5 - 0.2
 }
 ```
+
+## 재활용 (Mixins)
+
+- `Mixins`으로 자주 사용하는 코드를 따로 선언하여 사용할 수 있다.
+- `Mixins` 안의 값은 `default` 값으로 선언을 하지 않을 시 들어가는 값이다
+- `Mixins` 를 선언하고 불러올땐 `@include`를 사용한다.
+
+```scss
+@mixin size($w: 100px, $h: 100px) {
+  width: $w;
+  height: $h;
+}
+
+.container {
+  $change: 10px;
+  .item {
+    @include size(200px, 200px);
+    background: tomato;
+    @if ($change == 10px) {
+      background: yellowgreen;
+    }
+  }
+}
+```

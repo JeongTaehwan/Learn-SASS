@@ -1,10 +1,14 @@
+@mixin size($w: 100px, $h: 100px) {
+  width: $w;
+  height: $h;
+}
+
 .container {
-  $size: 100px;
+  $change: 10px;
   .item {
-    width: $size * 3;
-    height: $size;
+    @include size(200px, 200px);
     background: tomato;
-    @if ($size == 100px) {
+    @if ($change == 10px) {
       background: yellowgreen;
     }
   }
