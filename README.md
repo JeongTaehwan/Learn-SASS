@@ -242,3 +242,26 @@ a {
   }
 }
 ```
+
+## 확장
+
+- `@extend 선택자` 키워드를 사용함
+- 자바스크립트의 rest,spread와 비슷함
+- 선택자 안의 값들을 가져옴
+
+```scss
+.btn {
+  padding: 10px;
+  margin: 10px;
+  background: blue;
+}
+.btn-danger {
+  @extend .btn;
+  background: red;
+}
+```
+
+- 확장을 추천하지 않는 이유
+  - 내 선택자가 어디에 첨부될 것인가?
+  - 원치 않는 부작용이 초래될수도 있음
+  - 한 번의 확장으로 큰 css파일이 만들어 질 수 있음
