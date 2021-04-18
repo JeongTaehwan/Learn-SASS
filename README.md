@@ -416,3 +416,38 @@ a {
   }
 }
 ```
+
+## 조건과 반복
+
+## if (함수)
+
+- `if(조건, 표현식1, 표현식2)` 이런식으로 작성함
+- 조건이 참이면 표현식1, 아니면 표현식2를 적용해줌
+- 삼항연산자와 비슷함
+
+```scss
+$width: 555px;
+div {
+  width: if($width > 300px, $width, null);
+}
+```
+
+## if (지시어)
+
+- 우리가 흔히아는 if문과 비슷함
+- `@else`,`if`와 같이 쓸 수 있음
+
+```scss
+$color: orange;
+div {
+  @if $color == strawberry {
+    color: #fe2e2e;
+  } @else if $color == orange {
+    color: #fe9a2e;
+  } @else if $color == banana {
+    color: #ffff00;
+  } @else {
+    color: #2a1b0a;
+  }
+}
+```
