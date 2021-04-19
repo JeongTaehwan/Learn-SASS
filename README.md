@@ -472,3 +472,21 @@ div {
   }
 }
 ```
+
+## each
+
+- `@each` 키워드 사용
+- `List`와 `Map`을 반복할때 사용
+- `for in`문과 비슷함
+
+```scss
+$fruits: (apple, orange, banana, mango);
+
+.fruits {
+  @each $fruit in $fruits {
+    li.#{$fruit} {
+      background: url("/images/#{$fruit}.png");
+    }
+  }
+}
+```
