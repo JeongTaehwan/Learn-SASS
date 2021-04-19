@@ -451,3 +451,24 @@ div {
   }
 }
 ```
+
+## for
+
+- 반복문 for문과 유사
+- `from` 과 `to` 또는 `through` 키워드와 함께 사용
+
+```scss
+// 1부터 3번 반복
+@for $i from 1 through 3 {
+  .through:nth-child(#{$i}) {
+    width: 20px * $i;
+  }
+}
+
+// 1부터 3 직전까지만 반복(2번 반복)
+@for $i from 1 to 3 {
+  .to:nth-child(#{$i}) {
+    width: 20px * $i;
+  }
+}
+```
