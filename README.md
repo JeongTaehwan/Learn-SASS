@@ -490,3 +490,21 @@ $fruits: (apple, orange, banana, mango);
   }
 }
 ```
+
+## while
+
+-`@while` 키워드 사용
+
+- 조건이 `false`일때까지 사용함
+- 사용을 권장하지 않음
+
+```scss
+$i: 6;
+
+@while $i > 0 {
+  .item-#{$i} {
+    width: 2px * $i;
+  }
+  $i: $i - 2;
+}
+```
